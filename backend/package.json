@@ -1,0 +1,21 @@
+{
+  "name": "qinghe-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seed.js"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "3.0.84",
+    "ai": "7.0.162",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "ipaddr.js": "^1.9.1",
+    "p-queue": "10.0.0",
+    "zod": "^3.25.76"
+  }
+}

@@ -1,0 +1,73 @@
+/* 审核页使用独立命名，避免影响已有实验表格与登录页。 */
+.registration-panel { min-width:0; }
+.registration-intro { color:var(--color-text-secondary); line-height:1.85; margin:0 0 24px; max-width:950px; }
+.registration-status-filters { display:flex; flex-wrap:wrap; gap:8px; border-bottom:1px solid var(--color-border); margin-bottom:22px; padding-bottom:12px; }
+.registration-status-filters button { display:flex; align-items:center; gap:10px; padding:10px 14px; min-height:44px; border-radius:var(--radius-sm); color:var(--color-text-secondary); }
+.registration-status-filters button span { font-size:14px; background:var(--color-surface-hover); padding:1px 7px; border-radius:4px; }
+.registration-status-filters button.active { color:var(--color-primary-ink); background:var(--color-primary-soft); font-weight:600; }
+.registration-status-filters button.active span { background:#fff; }
+.registration-toolbar { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:20px; }
+.registration-toolbar .search-input { flex:1; min-width:220px; }
+.registration-role-filter { width:138px; }
+.registration-panel>.error-message { margin-bottom:18px; }
+.registration-selection-bar { display:flex; flex-wrap:wrap; gap:14px; align-items:center; padding:15px 0; border-bottom:1px solid var(--color-border); }
+.registration-selected-count { font-size:15px; color:var(--color-text-secondary); }
+.registration-batch-actions { display:flex; flex-wrap:wrap; gap:10px; margin-left:auto; }
+.registration-request { display:grid; grid-template-columns:22px minmax(150px,1fr) minmax(130px,1fr) minmax(170px,1.1fr) auto; align-items:center; column-gap:16px; row-gap:14px; padding:22px 0; border-bottom:1px solid var(--color-border); }
+.registration-request>div { min-width:0; }
+.registration-select { display:flex; align-items:center; min-height:44px; cursor:pointer; }
+.registration-person>div { display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+.registration-person strong { font-size:16px; color:var(--color-text-secondary); overflow-wrap:anywhere; }
+.registration-role { font-size:13px; color:var(--color-text-secondary); background:var(--color-surface-hover); padding:3px 7px; border-radius:4px; white-space:nowrap; }
+.registration-person p { font-size:15px; margin:8px 0 0; color:var(--color-text-secondary); overflow-wrap:anywhere; }
+.registration-context>span { font-size:13px; color:var(--color-text-secondary); }
+.registration-context p { font-size:15px; line-height:1.7; margin:6px 0 0; color:var(--color-text-secondary); white-space:pre-wrap; overflow-wrap:anywhere; }
+.registration-request-status { display:flex; flex-direction:column; align-items:flex-start; gap:6px; }
+.registration-request-status time { font-size:13px; color:var(--color-text-secondary); line-height:1.5; }
+.registration-state { font-size:14px; padding:4px 9px; border-radius:4px; color:#705817; background:#f4edd8; }
+.registration-state.approved { color:var(--color-primary-ink); background:var(--color-primary-soft); }
+.registration-state.rejected { color:#8b4735; background:#f8eae3; }
+.registration-row-actions { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:14px; }
+.registration-row-actions>.text-button { min-height:44px; }
+.registration-review-record { grid-column:2 / -1; font-size:15px; line-height:1.7; color:var(--color-text-secondary); padding:10px 14px; margin:0; background:var(--color-surface-hover); border-radius:var(--radius-sm); overflow-wrap:anywhere; white-space:pre-wrap; }
+.registration-review-record span { display:inline-block; color:var(--color-text-secondary); margin-right:14px; }
+.registration-review-form { padding:24px; background:var(--color-surface-hover); border:1px solid var(--color-border); border-radius:10px; margin:20px 0; gap:16px; }
+.registration-review-heading { display:flex; align-items:center; justify-content:space-between; gap:15px; }
+.registration-review-heading h2 { font-size:20px; margin:0; color:var(--color-text-secondary); }
+.registration-review-heading h2:focus { outline:none; }
+.registration-review-summary { font-size:15px; color:var(--color-text-secondary); margin:0; }
+.registration-selected-names { display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:0; max-height:150px; overflow:auto; }
+.registration-selected-names li { font-size:15px; padding:7px 11px; border:1px solid var(--color-border); background:#fff; border-radius:var(--radius-sm); color:var(--color-text-secondary); overflow-wrap:anywhere; max-width:100%; }
+.registration-selected-names span { font-size:13px; color:var(--color-text-secondary); margin-left:8px; }
+.registration-review-form .form-grid { margin:4px 0 0; }
+.registration-review-help { font-size:15px; color:var(--color-text-secondary); line-height:1.8; margin:0; }
+.registration-review-actions { display:flex; justify-content:flex-end; flex-wrap:wrap; gap:10px; margin-top:4px; }
+.registration-empty { display:flex; align-items:center; flex-direction:column; gap:10px; padding:48px 20px; text-align:center; color:var(--color-text-secondary); line-height:1.7; }
+.registration-empty strong { color:var(--color-text-secondary); font-size:16px; font-weight:500; }
+.registration-empty p { font-size:15px; margin:0; }
+@media(max-width:1200px) {
+  .registration-request { grid-template-columns:22px minmax(130px,1fr) minmax(130px,1fr) auto; }
+  .registration-request-status { grid-column:2; grid-row:2; }
+  .registration-row-actions { grid-column:4; grid-row:1 / span 2; }
+  .registration-review-record { grid-row:auto; }
+}
+@media(max-width:760px) {
+  .registration-status-filters { gap:3px; }
+  .registration-status-filters button { gap:6px; padding:9px 8px; font-size:15px; flex:1; justify-content:center; white-space:nowrap; }
+  .registration-status-filters button span { font-size:13px; padding:1px 5px; }
+  .registration-toolbar .search-input { flex-basis:100%; min-width:0; }
+  .registration-role-filter { flex:1; width:auto; min-width:0; }
+  .registration-request { grid-template-columns:20px minmax(0,1fr); gap:14px 10px; }
+  .registration-select { align-self:start; }
+  .registration-context { grid-column:2; }
+  .registration-request-status { grid-column:2; grid-row:auto; }
+  .registration-row-actions { grid-column:2; grid-row:auto; justify-content:flex-start; }
+  .registration-review-record { grid-column:2; }
+  .registration-selection-bar { gap:12px; }
+  .registration-batch-actions { width:100%; margin-left:0; }
+  .registration-batch-actions button { flex:1; }
+  .registration-review-form { padding:18px 14px; }
+  .registration-review-form .form-grid { grid-template-columns:1fr; gap:18px; }
+  .registration-review-heading h2 { font-size:18px; }
+  .registration-review-actions button { flex:1; }
+}

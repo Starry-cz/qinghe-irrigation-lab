@@ -1,0 +1,78 @@
+/* 个人模型和实验模型在同一面板中分区展示，所有密钥输入仅保留在当前表单。 */
+.model-settings-panel { min-width:0; width:100%; color:var(--color-text-secondary); }
+.model-settings-loading { padding:18px 0; color:var(--color-text-secondary); }
+.model-effective { padding:22px 24px; background:var(--color-primary-soft); border:1px solid var(--green-5); border-radius:16px; margin-bottom:28px; }
+.model-effective-title { display:flex; align-items:center; gap:13px; }
+.model-effective-title>svg { color:var(--color-text-secondary); flex-shrink:0; }
+.model-effective-title>div { flex:1; min-width:0; }
+.model-effective-title>div>span { display:block; font-size:13px; color:var(--color-text-secondary); margin-bottom:4px; }
+.model-effective-title strong { font-size:20px; color:var(--color-text-secondary); font-weight:600; overflow-wrap:anywhere; }
+.model-source-badge { display:inline-block; flex-shrink:0; font-size:13px; line-height:1.7; border-radius:var(--radius-sm); padding:4px 8px; background:#fff; color:var(--color-text-secondary); border:1px solid var(--color-border); }
+.model-effective p { font-size:15px; color:var(--color-text-secondary); margin:14px 0 0; line-height:1.8; }
+.model-settings-panel>.error-message { margin:0 0 20px; overflow-wrap:anywhere; }
+.model-settings-panel>.success-banner { align-items:flex-start; }
+.model-settings-panel>.success-banner svg { flex-shrink:0; margin-top:4px; }
+.model-settings-form { display:flex; flex-direction:column; gap:20px; }
+.model-mode-fieldset { border:0; padding:0; margin:0; min-width:0; }
+.model-mode-fieldset legend { font-size:17px; font-weight:600; margin-bottom:14px; padding:0; color:var(--color-text-secondary); }
+.model-mode-options { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.model-settings-panel .model-mode-choice { display:flex; gap:11px; align-items:flex-start; padding:16px; border:1px solid var(--color-border); border-radius:var(--radius-sm); background:#fff; cursor:pointer; min-width:0; }
+.model-mode-choice.selected { background:var(--green-2); border-color:var(--color-primary); box-shadow:inset 0 0 0 1px var(--color-primary); }
+.model-mode-choice input { margin:3px 0 0; }
+.model-mode-choice strong { display:block; font-size:15px; color:var(--color-text-secondary); font-weight:600; }
+.model-mode-choice small { display:block; margin-top:5px; font-size:14px; color:var(--color-text-secondary); line-height:1.65; }
+.model-default-preview { padding:20px; background:var(--color-surface-hover); border:1px solid var(--color-border); border-radius:var(--radius-sm); }
+.model-subheading { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px; }
+.model-subheading strong { font-size:15px; font-weight:600; }
+.model-subheading span { font-size:14px; color:var(--color-text-secondary); }
+.model-details { display:grid; gap:12px; margin:0; }
+.model-details>div { display:grid; grid-template-columns:82px minmax(0,1fr); gap:12px; font-size:15px; line-height:1.65; }
+.model-details dt { color:var(--color-text-secondary); }
+.model-details dd { color:var(--color-text-secondary); margin:0; overflow-wrap:anywhere; }
+.model-custom-fields { display:flex; flex-direction:column; gap:19px; }
+.model-field-intro { font-size:15px; color:var(--color-text-secondary); margin:0; line-height:1.85; }
+.model-custom-fields label { display:block; color:var(--color-text-secondary); font-size:15px; line-height:1.6; font-weight:500; min-width:0; }
+.model-custom-fields label input,.model-custom-fields label select { margin-top:9px; }
+.model-custom-fields label small { display:block; color:var(--color-text-secondary); font-size:14px; line-height:1.8; font-weight:400; margin-top:7px; }
+.model-field-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.model-advanced { border-top:1px solid var(--color-border); padding-top:14px; }
+.model-advanced summary { cursor:pointer; font-size:15px; color:var(--color-text-secondary); padding:5px 0; }
+.model-advanced label { max-width:520px; padding-top:15px; }
+.model-unsaved { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:7px 15px; font-size:15px; line-height:1.8; color:#766025; background:#f6f0de; border-radius:var(--radius-sm); padding:10px 13px; margin:0; }
+.model-unsaved button { color:#5e5429; font-size:14px; text-decoration:underline; padding:4px 0; }
+.model-form-actions { display:flex; flex-wrap:wrap; gap:12px; }
+.model-test-note { color:var(--color-text-secondary); font-size:14px; line-height:1.85; margin:-6px 0 0; }
+.model-test-result { border-left:3px solid #629362; background:var(--color-surface-hover); padding:16px 18px; border-radius:0 6px 6px 0; font-size:15px; line-height:1.8; color:var(--color-text-secondary); overflow-wrap:anywhere; }
+.model-test-result>div { display:flex; align-items:center; gap:9px; color:var(--color-text-secondary); }
+.model-test-result p { margin:9px 0; }
+.model-test-result blockquote { background:#fff; padding:9px 13px; border-radius:4px; margin:0 0 12px; white-space:pre-wrap; color:var(--color-text-secondary); }
+.model-test-result>span { font-size:14px; }
+.model-remove-section { margin-top:22px; }
+.model-delete-link { display:inline-flex; align-items:center; gap:7px; min-height:44px; padding:8px 0; font-size:15px; color:#855f4d; }
+.model-delete-link:hover { text-decoration:underline; }
+.model-delete-confirm { padding:16px 18px; border:1px solid #ddc9b9; border-radius:var(--radius-sm); background:#fbf6ee; }
+.model-delete-confirm p { color:#6f5745; font-size:15px; line-height:1.85; margin:0 0 14px; }
+.model-delete-confirm>div { display:flex; flex-wrap:wrap; gap:10px; }
+.model-delete-button { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:44px; padding:10px 16px; border:1px solid #b88874; background:#fff; border-radius:var(--radius-sm); color:#8e4b35; font-size:15px; }
+.model-experiment-section { border-top:1px solid var(--color-border); margin-top:32px; padding-top:24px; }
+.model-experiment-heading { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:20px; }
+.model-experiment-heading h2 { margin:0; font-size:19px; color:var(--color-text-secondary); }
+.model-experiment-description { color:var(--color-text-secondary); font-size:15px; line-height:1.85; margin:20px 0 16px; }
+.model-owner { font-size:14px; line-height:1.8; color:var(--color-text-secondary); margin:14px 0 0; }
+.model-experiment-actions { display:flex; flex-wrap:wrap; gap:12px; }
+.model-experiment-help { font-size:14px; color:var(--color-text-secondary); line-height:1.9; margin:14px 0 0; }
+@media(max-width:760px) {
+  .model-effective { padding:17px 15px; }
+  .model-effective-title { flex-wrap:wrap; gap:10px; }
+  .model-effective-title strong { font-size:18px; }
+  .model-effective-title>.model-source-badge { margin-left:31px; }
+  .model-mode-options { grid-template-columns:1fr; gap:10px; }
+  .model-settings-panel .model-mode-choice { padding:14px; }
+  .model-field-grid { grid-template-columns:1fr; gap:19px; }
+  .model-default-preview { padding:17px 14px; }
+  .model-details>div { grid-template-columns:70px minmax(0,1fr); gap:8px; }
+  .model-form-actions>button { flex:1; padding:10px 12px; }
+  .model-experiment-actions>button { width:100%; white-space:normal; line-height:1.6; text-align:left; }
+  .model-experiment-heading h2 { font-size:18px; }
+  .model-test-result { padding:14px; }
+}

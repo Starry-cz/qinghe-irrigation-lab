@@ -1,0 +1,13 @@
+node_modules
+frontend/dist
+.env
+**/model-secrets.key
+**/*.model-secrets.key
+本地登录说明.txt
+.git
+data
+backups
+output
+.playwright-cli
+tests
+*.zip

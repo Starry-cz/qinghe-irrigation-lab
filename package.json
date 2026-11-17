@@ -1,0 +1,27 @@
+{
+  "name": "qinghe-irrigation-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "青禾智能体虚拟灌溉实验平台",
+  "engines": { "node": ">=24.0.0" },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "seed": "npm run seed -w backend",
+    "setup": "node scripts/setup.js",
+    "start": "npm run start -w backend",
+    "test": "node --test tests/*.test.js",
+    "smoke": "node scripts/smoke.js",
+    "backup": "node scripts/backup.js",
+    "check:ai": "node scripts/check-ai.js",
+    "check:agent": "node scripts/check-agent.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
